@@ -2,7 +2,7 @@
   "private": true,
   "workspaces": ["packages/*", "sites/*"],
   "scripts": {
-    "dev": "yarn workspace site/wcw develop",
-    "debug": "yarn workspace site/wcw node --inspect ../node_modules/gatsby/dist/bin/gatsby.js develop"
+    "dev": "yarn workspace wcw develop",
+    "debug": "yarn workspace wcw node --inspect ../node_modules/gatsby/dist/bin/gatsby.js develop"
   }
 }
