@@ -8,7 +8,12 @@ module.exports = options => {
       author: `@gatsbyjs`,
     },
     plugins: [
-      `gatsby-transformer-yaml-pages`,
+      {
+        resolve: `gatsby-transformer-yaml`,
+        options: {
+          typeName: `PagesYaml`
+        }
+      },
       {
         resolve: `gatsby-source-filesystem`,
         options: {

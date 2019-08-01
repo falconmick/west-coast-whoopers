@@ -5,4 +5,4 @@ pageBuilder:
     header: Hello World
     subTitle: welcome to the site
   - component: Content
-    body: Welcome to WCW
+    body: congrats! you rock

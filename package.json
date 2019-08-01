@@ -3,6 +3,7 @@
   "workspaces": ["packages/*", "sites/*"],
   "scripts": {
     "dev": "yarn workspace wcw develop",
-    "debug": "yarn workspace wcw node --inspect ../node_modules/gatsby/dist/bin/gatsby.js develop"
+    "debug": "yarn workspace wcw node --inspect ../node_modules/gatsby/dist/bin/gatsby.js develop",
+    "clean": "yarn workspace wcw clean"
   }
 }
