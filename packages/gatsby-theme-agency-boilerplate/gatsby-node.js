@@ -47,7 +47,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       allPagesYaml {
         edges {
           node {
-            slug
             pageBuilder
             parent {
               ... on File {
@@ -76,9 +75,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     function toPagePath(node) {
         const { dir } = path.parse(node.relativePath)
-        return path.join(dir, node.name)
+        return path.join('/', dir, node.name)
+            .replace(/index$/g, '') // replace /index to allow folder based blog posts
             .replace(/[\\\/]+/g, '/') // replaces \\ with /
-            .replace(/\/index$/g, '') // replace /index to allow folder based blog posts
     }
 
     // Create a page for each Post

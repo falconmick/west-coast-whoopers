@@ -1,21 +1,19 @@
 {
-  "name": "gatsby-theme-agency-boilerplate",
+  "name": "gatsby-theme-community-club",
   "private": false,
-  "description": "Build your clients website with yaml",
+  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "gatsby-source-filesystem": "^2.1.7",
-    "gatsby-transformer-yaml": "^2.2.4"
-  },
   "peerDependencies": {
     "gatsby": "^2.13.45",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
+  "dependencies": {
+    "gatsby-theme-agency-boilerplate": "0.1.0"
+  },
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "rimraf": "^2.6.3"
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
@@ -27,6 +25,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "clean": "rimraf .cache",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {

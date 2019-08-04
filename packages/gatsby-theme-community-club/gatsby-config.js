@@ -6,7 +6,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-theme-community-club', options: {}
+      resolve: 'gatsby-theme-agency-boilerplate', options: {}
     }
   ],
 };
