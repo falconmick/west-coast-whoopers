@@ -48,7 +48,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             slug
-            pageJson
+            pageBuilder
             parent {
               ... on File {
                 name
@@ -83,7 +83,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     // Create a page for each Post
     yamlPages.forEach(({node: yamlPage}) => {
-        const { parent, pageJson, ...otherYamlProps } = yamlPage
+        const { parent, pageBuilder, ...otherYamlProps } = yamlPage
         const slug = toPagePath(parent)
         createPage({
             path: slug,
@@ -92,7 +92,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 pageMeta: {
                     otherYamlProps
                 },
-                pageJson,
+                pageBuilder,
                 siteTitle,
             },
         })
@@ -103,22 +103,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
-    const { createFieldExtension, createTypes } = actions
-
-    createFieldExtension({
-        name: "pageJson",
-        extend(options, prevFieldConfig) {
-            return {
-                resolve({pageBuilder}) {
-                    return pageBuilder
-                },
-            }
-        },
-    })
+    const { createTypes } = actions
 
     createTypes(`
     type PagesYaml implements Node {
-      pageJson: JSON @pageJson
+      pageBuilder: JSON
     }
   `)
 }
