@@ -2,8 +2,8 @@
   "private": true,
   "workspaces": ["packages/*", "sites/*"],
   "scripts": {
-    "dev": "yarn workspace wcw develop",
-    "debug": "yarn workspace wcw node --inspect ../node_modules/gatsby/dist/bin/gatsby.js develop",
-    "clean": "yarn workspace wcw clean"
+    "dev": "yarn workspace gatsby-theme-community-club develop",
+    "debug": "yarn workspace gatsby-theme-community-club node --inspect ../node_modules/gatsby/dist/bin/gatsby.js develop",
+    "clean": "yarn workspace gatsby-theme-community-club clean"
   }
 }

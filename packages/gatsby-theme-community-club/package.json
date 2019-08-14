@@ -12,8 +12,12 @@
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
+    "gatsby": "^2.13.62",
     "gatsby-plugin-emotion": "^4.1.2",
-    "gatsby-theme-agency-boilerplate": "0.1.0"
+    "gatsby-theme-agency-boilerplate": "0.1.0",
+    "prop-types": "^15.7.2",
+    "typeface-cardo": "^0.0.72",
+    "typeface-raleway": "^0.0.75"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
