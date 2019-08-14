@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     {
       resolve: 'gatsby-theme-agency-boilerplate', options: {}
-    }
+    },
+    `gatsby-plugin-emotion`
   ],
 };
